@@ -1,0 +1,46 @@
+body{
+    width: 1200px;
+    margin: 0;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 1200px;
+    height: 35px;
+    background-color: #212529;
+    display: flex;
+    color: rgb(177, 177, 177);
+    line-height: 35px;
+    justify-content: space-between;
+    font-size: 14px;    
+}
+.activeLi{
+    color: white;
+}
+.activeLi a, .activeLi i{
+    color: white;
+}
+header div:nth-child(1){
+    margin-left: 30px;
+}
+header div:nth-child(2){
+    margin-right: 50px;    
+}
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+header ul li{
+    margin-right: 20px;
+}
+header ul li a{
+    color: rgb(177, 177, 177);
+    text-decoration: none;
+}
+
+main{
+    margin-top: 35px;
+}
+

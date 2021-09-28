@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+}
+header{
+    height: 60px;
+    /* background-color: tomato; */
+    background-color: rgb(255,76,79);
+    line-height: 60px;
+}
+a{
+    color: white;
+}
+.hd_left{
+    float: left;
+    margin-left: 60px;
+    line-height: 60px;
+}
+.hd_left img{
+    vertical-align: middle;
+}
+.hd_right{
+    float: right;
+    margin-left: 60px;
+    margin-right: 60px
+}
+
+/* 内容 */
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.title{
+    font-weight: bolder;
+}
+.red_line{
+    width: 50px;
+    height: 3px;
+    background-color: rgb(84,3,20);
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.context{
+    display: flex;
+    flex-wrap: wrap;
+}
+.context .divOne{
+    background-color: rgb(254,240,239);
+    width: 220px;
+    margin: 0 20px 8px 8px;
+    box-sizing: border-box;
+    border: 1px rgb(248,213,202) solid;
+    padding: 10px;
+    padding-bottom: 0;
+}
+.divOne img{
+    width: 100%;
+    height: 260px;
+}
+.divOne p{
+    margin: 6px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* 尾部 */
+footer{
+    background-color: rgb(129,0,20);
+    color: white;
+    padding: 0 30px;
+    padding-top: 30px;
+}
+footer .info{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.ft_img{
+    width: 120px;
+    height: 120px;
+}
+.ft_text{
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #ddd;
+}
+.ft{
+    width: 80%;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px rgb(56, 56, 56) solid;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
