@@ -1,11 +1,11 @@
 body{
-    width: 1200px;
+    width: 100%;
     margin: 0;
 }
 header{
     position: fixed;
     top: 0;
-    width: 1200px;
+    width: 100%;
     height: 35px;
     background-color: #212529;
     display: flex;
@@ -40,7 +40,73 @@ header ul li a{
     text-decoration: none;
 }
 
+
 main{
+    width: 100%;
     margin-top: 35px;
 }
+.title{
+    width: 100%;
+    background-color: #212529;
+    color: white;
+    line-height: 30px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.title span{
+    color: red;
+    font-size: 26px;
+    font-weight: bolder;
+}
+.oldTitle{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.titleImg{
+    text-align: center;
+}
 
+.textInfo{
+    width: 80%;
+    margin: 15px auto;
+    font-size: 15px;
+}
+.textInfo div{
+    margin: 10px 0;
+    width: 100%;
+}
+.textInfo .p1{
+    font-weight: bolder;
+}
+
+
+
+/* 移动端 */
+@media screen and (max-width: 375px) {
+    header, footer{
+        width: 100%;
+    }
+    main{
+        width: 100%;
+    }
+    .title{
+        box-sizing: border-box;
+        padding-right: 20px
+    }
+    .textInfo{
+        width: 85%;
+    }
+    .textInfo div{
+        box-sizing: border-box;
+        padding-right: 30px;
+        font-size: 14px;
+    }
+    .oldTitle{
+        text-align: center;
+        padding: 0
+    }
+}
