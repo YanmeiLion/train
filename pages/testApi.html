@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mock text api</title>
+    <style>
+        .active{
+            background-color: cornflowerblue;
+            color: white;
+            border: none;
+            border: 2px cornflowerblue solid;
+        }
+    </style>
+</head>
+
+<body>
+    测试api
+    <h3>商品列表</h3>
+    <table border="1" style="border-collapse: collapse; width: 300px; text-align: center;">
+        <thead>
+            <tr>
+                <td>种类</td>
+                <td>价格</td>
+                <td>日期</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- mock 数据动态获取 -->
+        </tbody>
+    </table>
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        // 测试api
+        function showData(){
+            $('table tbody').append('<img src="../image/loading.png" alt="">')
+            axios.get('http://mock-api.com/jz8mOeg4.mock/products')
+            .then(res => {                
+                console.log('res', res.data)
+                if (res.status == 200) {
+                    $('table tbody img').remove()
+                    res.data.forEach(element => {
+                        const newTr = (` <tr>
+                                <td>${element.name}</td>
+                                <td>${element.price}</td>
+                                <td>${element.date}</td>
+                            </tr>`)
+                        $('table tbody').append(newTr)
+                    });
+                }
+            })
+            .catch(err => {
+                console.log('err', err)
+            })
+        }
+        showData();
+
+        // 切换button样式
+        $('button').click(function() {
+            console.log(this)
+            $('button').each(function (){
+                $(this).removeAttr('class', 'active')
+            })
+            $(this).attr('class', 'active')
+        })
+        
+
+    </script>
+</body>
+
+</html>

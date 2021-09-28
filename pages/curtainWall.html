@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹幕墙cutainWall</title>
+    <style>
+        #wall {
+            width: 100%;
+            height: 260px;
+            border-bottom: 1px #ccc solid;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 20px 0;
+        }
+
+        /* .pText {
+            position: absolute;
+            right: 0;
+            top: 70px;
+            margin: 0;
+            transform: translateX(-200px);
+            transition: transfrom 3s;
+        } */
+        @keyframes leftMove {
+            0% {}
+            100% {
+                transform: translateX(-100vw)
+            }
+        }
+        .pText {
+            position: absolute;
+            /* right: -40px; */
+            right: 0;
+            top: 70px;
+            margin: 0;
+            animation: leftMove 6s linear forwards;
+        }
+        /* 鼠标hover暂停动画 */
+        .pText:hover{
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="wall">
+        <p class="pText">今天下雨了</p>
+    </div>
+    <div style='text-align: center;'>
+        <input type="text">
+        <button id="send">发射</button>
+        <button id="clear">清屏</button>
+    </div>
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        // 发送
+        $('#send').click(function () {
+            const newText = $('input').val()
+            // 颜色随机，大小随机
+            const r = Math.floor(Math.random() * 256)
+            const g = Math.floor(Math.random() * 256)
+            const b = Math.floor(Math.random() * 256)
+            const color = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+            const size = Math.floor(Math.random() * 30) + 'px';
+            const top = (Math.floor(Math.random() * 220) ) + "px";
+            $('#wall').append(`
+                <p class='pText'
+                style="font-size: ${size}; color: ${color};
+                    postion: absolute; right: 0px;
+                    top: ${top};
+                "> 
+                    ${newText} 
+                </p>
+            `)
+        })
+
+        // 清屏
+        $('#clear').click(function () {
+            $('#wall p').remove()
+        })
+    </script>
+
+</body>
+
+</html>

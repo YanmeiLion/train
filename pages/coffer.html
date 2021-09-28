@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee_demo</title>
+    <!-- 引入css样式 -->
+    <link rel="stylesheet" href="../styles/coffee.css">
+    <!-- 引入jQuery -->
+
+</head>
+
+<body>
+    <!-- 咖啡布局 -->
+    <div style="width: 100%;">
+        <div class="header">
+            <img src="../image//coffee.jpg" alt="" width="30px">
+            <span>来杯咖啡吗？</span>
+        </div>
+        <div class="context">
+            <div class="left">
+                <ul>
+                    <li class="active">11</li>
+                    <li>22</li>
+                    <li>33</li>
+                    <li>44</li>
+                    <li>55</li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="banner">banner图</div>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <td>咖啡</td>
+                            <td>价格</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>咖啡</td>
+                            <td class="price">24</td>
+                        </tr>
+                        <tr>
+                            <td>咖啡</td>
+                            <td class="price">24</td>
+                        </tr>
+                        <tr>
+                            <td>咖啡</td>
+                            <td class="price">24</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>拿铁咖啡</p>
+
+                <img src="../image//coffee.jpg" alt="" width="30px">
+                <div class="text_info">
+                    一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字
+                </div>
+            </div>
+        </div>
+        <div class="footer"> &copy;这是一杯咖啡 </div>
+    </div>
+
+
+    <!-- <input type="text">
+    <input type="submit"> -->
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('.left ul li').click(function(){
+            $('.left ul li').each(function(){
+                $(this).removeAttr('class','active')
+            })
+            $(this).attr('class', 'active')
+        })
+    </script>
+
+
+</body>
+
+</html>

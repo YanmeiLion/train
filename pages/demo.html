@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo测试</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    hello 111111<br>
+    <a href="#!">hello</a>
+    <!-- 图片 -->
+    <!-- <img src="https://gimg2.baidu.com/image_sea
+        rch/src=http%3A%2F%2Fimg42.51tietu.net%2Fpic%2F
+        2017-031205%2F201703120531151gzfhftzdy0330994.jpg&refer=http%3A
+        %2F%2Fimg42.51tietu.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fm
+        t=jpeg?sec=1635059396&t=f3cb02924904a186c9431a84e2632c1d" 
+        alt="图片地址有误" style="width: 50px; height: 50px;"> -->
+    <p>
+        今天星期五&nbsp;&nbsp;今天星期五&lt; &gt; &#60;今天星期五
+        今天星期五&amp;今天星期五&copy;今天星期五
+    </p>
+    <!-- 弃用语义化标签 -->
+    <i>222</i> <b>333</b> <u>444</u> <br>
+
+    <!-- html链接 -->
+    <a href="mailto:yanmei@gemail.com">发送邮件</a>
+    <a href="tel:10086">打电话给10086</a>
+    <a href="#here">跳转到指定锚点</a>
+    <a href="here">锚点测试</a>
+    <br>
+
+    <table border='1' style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td rowspan="3">1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td colspan="3">1</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <table border="1" style="width: 40%; border-collapse: collapse;">
+        <thead>
+            <img src="../image/coffee.jpg" alt="" width="30pxs" style="vertical-align: middle;">
+            <span>来杯咖啡吗？</span>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>11</li>
+                        <li>22</li>
+                        <li>33</li>
+                        <li>44</li>
+                        <li>55</li>
+                    </ul>
+                </td>
+                <td>
+                    <img src="../image/coffee.jpg" alt="暂无图片" width="30px">
+                    <h4>111</h4>
+                    <span>
+                        大沙发沙发斯蒂芬
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="2">这是咖啡</td>
+        </tfoot>
+    </table>
+
+    <h3>JS demo</h3>
+    <h3>商品列表添加和删除</h3>
+    <p class="msg"></p>
+    
+    <ul id="list">
+        <!-- mock接口获取数据 -->
+    </ul>
+    <button id="removeAll">删除所有商品</button> <br>
+    名称： <input type="text"> <button id="add">添加</button>
+
+    <br>
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+        // 测试api
+        axios.get('http://mock-api.com/jz8mOeg4.mock/products')
+            .then(function (res) {
+                console.log('res', res.data)
+                res.data.forEach(element => {
+                    $('#list').append(`<li> ${element.name} ￥${element.price} </li>`)
+                });
+            })
+            .catch(function (err) {
+                console.log('err', err)
+            })
+        
+
+
+
+        // 添加
+        $('#add').click(function () {
+            const newAdd = $('input').val()
+            $('#list').append(`<li>${newAdd}</li>`)
+            $('.msg').html(`添加了新商品: ${newAdd}`)
+            $('.msg').css('color', 'black')
+
+            // 新增的无法删除，重定义
+            $('#list li').click(function () {
+                const delGoods = $(this).html()
+                $(this).remove()
+                $('.msg').html(`删除了商品: ${delGoods}`)
+                $('.msg').css('color', 'red')
+            })
+        })
+
+        // 删除一个商品
+        $('#list li').click(function () {
+            const delGoods = $(this).html()
+            $(this).remove()
+            $('.msg').html(`删除了商品: ${delGoods}`)
+            $('.msg').css('color', 'red')
+            console.log('removeOne')
+        })
+
+        // 删除所有
+        $('#removeAll').click(function () {
+            $('#list li').remove()
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
