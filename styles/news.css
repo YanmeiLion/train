@@ -1,16 +1,20 @@
 body{
     width: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+
 header{
     position: fixed;
     top: 0;
     width: 100%;
-    height: 35px;
+    height: 50px;
     background-color: #212529;
     display: flex;
     color: rgb(177, 177, 177);
-    line-height: 35px;
+    line-height: 50px;
     justify-content: space-between;
     font-size: 14px;    
 }
@@ -42,12 +46,13 @@ header ul li a{
 
 
 main{
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex: 1 0 auto;
 }
 main .theNewsOne{
     display: flex;
@@ -56,6 +61,9 @@ main .theNewsOne{
     border: 1px #ccc solid;
     margin-top: 25px;
     border-radius: 6px;
+}
+main .theNewsOne :hover{
+    cursor: pointer;
 }
 .theNewsOne p{
     font-size: 17px;
@@ -83,7 +91,6 @@ main .theNewsOne{
     margin-bottom: 25px;
     display: flex;
     justify-content: center;
-    margin-bottom: 125px;
 }
 .pages{
     margin: 0 5px;
@@ -92,30 +99,29 @@ main .theNewsOne{
     background-color: white;
     border: 1px #ccc solid;
     line-height: 24px;
-    color: blue;
+    color: rgb(5,110,253);
     width: 24px;
 }
 .btns .beforePage, .btns .afterPage{
     width: 80px;
 }
 .btns .beforePage:hover, .btns .afterPage:hover{
-    border: 1px solid rgb(95, 95, 236);
+    border: 1px solid rgb(5,110,253);
 }
 .btns .activeBtn{
-    background-color: rgb(95, 95, 236);
+    background-color: rgb(5,110,253);
     border: none;
     color: white;
 }
 
 
 footer{
-    position: fixed;
-    bottom: 0;
     width: 100%;
     height: 100px;
     font-size: 13px;
     background-color: rgb(239, 239, 240);
     box-sizing: border-box;
+    flex: 0 0 auto;
 }
 footer div:nth-child(1){
     height: 40px;
@@ -168,6 +174,23 @@ footer .info span{
     }
     main .theNewsOne span{
         margin-bottom: 10px;
+    }
+}
+
+/* ipad pro端 */
+@media screen and (max-width: 1024px) {
+    
+}
+
+/* ipad端 */
+@media screen and (max-width: 768px) and (min-width: 376px) {
+   
+    .theNewsOne div:nth-child(1){
+        width: 45%;
+        overflow: hidden;
+    }
+    .theNewsOne div:nth-child(2){
+        width: 65%;
     }
 }
 

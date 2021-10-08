@@ -2,16 +2,17 @@ body{
     width: 100%;
     margin: 0;
 }
+
 header{
-    position: fixed;
-    z-index: 1;
+    /* position: fixed;
+    z-index: 1; */
     top: 0;
     width: 100%;
-    height: 35px;
+    height: 50px;
     background-color: #212529;
     display: flex;
     color: rgb(177, 177, 177);
-    line-height: 35px;
+    line-height: 50px;
     justify-content: space-between;
     font-size: 14px;    
 }
@@ -52,6 +53,11 @@ section img{
     width: 100%;
 }
 
+main{
+    width: 82%;
+    margin: 0 auto;
+}
+
 .title{
     width: 90%;
     margin: 0 auto;
@@ -61,22 +67,22 @@ section img{
     display: flex;
 }
 .title hr{
-    width: 45%;
+    width: 43%;
     height: 1px;
     border: none;
     background-color: #ccc;
     box-sizing: border-box;
-    margin: 10px 10px;
+    margin-top: 10px;
 }
 .sectionImg{
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .sectionImg .imgInfo{
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -84,10 +90,10 @@ section img{
     margin: 0 auto;
 }
 .imgInfo img{
-    width: 100px;
+    width: 100%;
 }
 .imgOne{
-    width: 160px;
+    width: 140px;
     text-align: center;
 }
 .imgOne p{
@@ -116,7 +122,7 @@ hr{
     border: none;
     background-color: #ccc;
     margin-top: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;    
 }
 
 .intro_news{
@@ -127,8 +133,11 @@ hr{
     margin-bottom: 30px;
 }
 .newsOne{
-    width: 240px;
+    width: 24%;
     border: 1px #ccc solid;
+}
+.newsOne img{
+    width: 100%;
 }
 .newsOne p{
     margin: 8px 10px;
@@ -185,7 +194,15 @@ footer .info span{
     section img{
         width: 375px;
     }
-
+    #demo{
+        height: 220px;
+    }
+    .introduce .intro_text, .introduce .intro_text2 {
+        padding: 0;
+    }
+    .introduce img{
+        width: 100%;
+    }
     
     main .title{
         margin: 100%;
@@ -203,7 +220,7 @@ footer .info span{
         box-sizing: border-box;
     }
     main .title1{
-        margin-top: -180px;
+        margin-top: 20px;
     }
     .sectionImg{
         flex-wrap: wrap;
@@ -238,5 +255,19 @@ footer .info span{
         width: 100%;
     }
     
+
+}
+
+
+/* ipad端 */
+@media screen and (max-width: 768px) and (min-width: 376px) {
+   
+    #demo{
+        height: 450px;
+    }
+    .intro_text2{
+        padding-right: 0;
+        padding-top: 0;
+    }
 
 }

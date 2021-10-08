@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新闻列表页</title>
-    <link rel="stylesheet" href="../styles/news.css">
     <link rel="stylesheet" href="../until/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../until/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/news.css">
 </head>
 <body>
+    
     <header>
         <div>企业站</div>
         <div>
@@ -56,10 +58,12 @@
             <span>&copy;2021 Company, Inc</span>
         </div>
     </footer>
+    
 
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
+
         // 设置page的初始值, 点击下一页，及上一页切换数据,
         let page = 1;
         $('.afterPage').click(function (){

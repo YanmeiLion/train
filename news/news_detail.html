@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新闻内容页</title>
-    
+
     <link rel="stylesheet" href="../until/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/news_detail.css">
 </head>
@@ -30,18 +31,12 @@
             </ul>
         </div>
     </header>
+
     <main>
-        <div class="title"> <span>|</span> 2021年9月6日外交部发言人汪文斌主持例行记者会dsafasdfa </div>
-        <p class="oldTitle">(sXXXXXXXXXXXXXXXXXXXX) </p>
-        <div class="titleImg">
-            <img src="http://cms-bucket.ws.126.net/2021/0906/275289a2j00qz0lm8006ic000dw00dsc.jpg?imageView&thumbnail=140y88&quality=85" alt="">
-        </div>
-        <div class="textInfo">
-            <div class="p1"> 记者： XXXXXXXXXXXXXX</div>
-            <div> 汪文斌：XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX汪文斌：XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX汪文斌：XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
-            <div class="p1"> 记者： XXXXXXXXXXXXXX</div>
-            <div> 汪文斌：XXXXXXXXXXXXXXXXXXXXX</div>
-        </div>
+        <!-- <div class="title"> <span>|</span> 2021年9月6日外交部发言人汪文斌主持例行记者会dsafasdfa </div>
+        <p class="oldTitle">(sXXXXXXXXXXXXXXXXXXXX) </p> -->
+
+
     </main>
 
 
@@ -55,9 +50,15 @@
         console.log(code)
 
         axios.get(`
-            https://www.fastmock.site/mock/d8c33ca26a546a3c9be78ee13f714990/t1-0fficial/api/news/:code?code=${code}`)
+            https://www.fastmock.site/mock/d8c33ca26a546a3c9be78ee13f714990/t1-0fficial/api/news/${code}`)
             .then(res => {
-                console.log('res', res)
+                const newsInfo = (`
+                    <div class="title"> <span>|</span> ${res.data.data.title} </div>
+                    <div id="infos">
+                        ${res.data.data.text}
+                    </div>
+                `)
+                $('main').append(newsInfo)
             })
             .catch(err => {
                 console.log('err', err)
