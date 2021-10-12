@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,11 @@
     <link rel="stylesheet" href="../until/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../until/bootstrap-4.6.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/news.css">
+
 </head>
+
 <body>
-    
+
     <header>
         <div>企业站</div>
         <div>
@@ -32,33 +35,37 @@
     </header>
 
     <main>
-       <!-- 动态获取 -->
+        <!-- 动态获取 -->
+
     </main>
-    <div class="btns">
-        <button class="beforePage">上一页</button>
 
-        <div class="pages">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+    <div class="bottom">
+        <div class="btns">
+            <button class="beforePage">上一页</button>
+
+            <div class="pages">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+            </div>
+
+            <button class="afterPage">下一页</button>
         </div>
 
-        <button class="afterPage">下一页</button>
+        <footer>
+            <div>
+                <i class="fa fa-map-marker" aria-hidden="true"></i> 福州市仓山区 &nbsp;&nbsp;
+                <i class="fa fa-envelope-o" aria-hidden="true"></i> Robin@hotmail.com &nbsp;&nbsp;
+                <i class="fa fa-phone" aria-hidden="true"></i> 000-000-000
+            </div>
+            <div class="info">
+                <img src="../image/qr_code.jpg" alt="">
+                &nbsp;
+                <span>&copy;2021 Company, Inc</span>
+            </div>
+        </footer>
     </div>
-    
-    <footer>
-        <div>
-            <i class="fa fa-map-marker" aria-hidden="true"></i> 福州市仓山区 &nbsp;&nbsp;
-            <i class="fa fa-envelope-o" aria-hidden="true"></i> Robin@hotmail.com &nbsp;&nbsp;
-            <i class="fa fa-phone" aria-hidden="true"></i> 000-000-000
-        </div>
-        <div class="info">
-            <img src="../image/qr_code.jpg" alt="">
-            &nbsp;
-            <span>&copy;2021 Company, Inc</span>
-        </div>
-    </footer>
-    
+
 
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -66,27 +73,27 @@
 
         // 设置page的初始值, 点击下一页，及上一页切换数据,
         let page = 1;
-        $('.afterPage').click(function (){
-            if(page<3){
-                page = page+1;
+        $('.afterPage').click(function () {
+            if (page < 3) {
+                page = page + 1;
                 getNewsInfo(page)
                 showBtnAction();
             }
         })
 
-        $('.beforePage').click(function (){
-            if(page>1){
-                page = page-1;
+        $('.beforePage').click(function () {
+            if (page > 1) {
+                page = page - 1;
                 getNewsInfo(page)
                 showBtnAction();
             }
         })
 
         // 页码样式修改
-        function showBtnAction(){
-            $('.pages button').each(function (){
+        function showBtnAction() {
+            $('.pages button').each(function () {
                 const number = $(this).html();
-                if(number == page){
+                if (number == page) {
                     $(this).addClass('activeBtn').siblings('button').removeClass('activeBtn');
                 }
             })
@@ -94,21 +101,21 @@
         showBtnAction();
 
 
-        $('header ul li').click(function (){
-            $('header ul li').each(function(){
+        $('header ul li').click(function () {
+            $('header ul li').each(function () {
                 $(this).removeAttr('class', 'activeLi');
             })
             $(this).attr('class', 'activeLi');
         })
 
-        function getNewsInfo(page){
+        function getNewsInfo(page) {
             axios.get(`https://www.fastmock.site/mock/d8c33ca26a546a3c9be78ee13f714990/t1-0fficial/api/news?page=${page}`)
-            .then(res => {
-                const { code, data } = res.data
-                if(code == 200){
-                    $('main .theNewsOne').remove();
-                    data.forEach(element => {
-                        const newDiv = (`
+                .then(res => {
+                    const { code, data } = res.data
+                    if (code == 200) {
+                        $('main .theNewsOne').remove();
+                        data.forEach(element => {
+                            const newDiv = (`
                             <div class="theNewsOne" data-code='${element.code}'>
                                 <div> <img src="${element.img}" alt=""> </div>
                                 <div>
@@ -117,25 +124,26 @@
                                 </div>
                             </div>
                         `)
-                        $('main').append(newDiv)
-                    });
-                    
-                    // 点击 每一个,获取每一个的code, 并且跳转到内容详情页
-                    $('main .theNewsOne').click(function() {
-                        const thisCode = $(this).data('code')
-                        console.log(thisCode)
-                        location.replace('news_detail.html?code=' + thisCode)
-                    })
-                }
-            })
-            .catch(err => {
-                console.log('err', err)
-            })
+                            $('main').append(newDiv)
+                        });
+
+                        // 点击 每一个,获取每一个的code, 并且跳转到内容详情页
+                        $('main .theNewsOne').click(function () {
+                            const thisCode = $(this).data('code')
+                            console.log(thisCode)
+                            location.replace('news_detail.html?code=' + thisCode)
+                        })
+                    }
+                })
+                .catch(err => {
+                    console.log('err', err)
+                })
         }
         getNewsInfo(page);
 
-        
+
     </script>
 
 </body>
+
 </html>
