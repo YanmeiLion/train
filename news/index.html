@@ -2,223 +2,222 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首页</title>
-    <link rel="stylesheet" href="../until/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../until/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页</title>
+  <link rel="stylesheet" href="../until/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../until/bootstrap-4.6.0-dist/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="../styles/home.css">
-    
-    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../styles/home.css">
 
-    <style>
-        .carousel-inner div {
-            width: 100%;
-            height: 600px;
-            overflow: hidden;
-        }
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-        .carousel-inner img {
-            width: 100%;
-        }
-    </style>
+  <style>
+    .carousel-inner div {
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <span class="navbar-brand" style="padding-left: 20px">企业站</span>
-        <button class="navbar-toggler justify-content-end" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        首页
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./news.html">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        新闻
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./about.html">
-                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
-                        关于我们
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <span class="navbar-brand" style="padding-left: 20px">企业站</span>
+    <button class="navbar-toggler justify-content-end" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./index.html">
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            首页
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./news.html">
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            新闻
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+            关于我们
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-
+  <!-- <section> -->
     <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- 指示符 -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
 
-        <!-- 指示符 -->
-        <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-
-        <!-- 轮播图片 -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../image/banner_02_1080p.jpg">
-            </div>
-            <div class="carousel-item">
-                <img src="../image/banner_01_1080p.jpg">
-            </div>
-            <div class="carousel-item">
-                <img src="../image/banner_03_1080p.jpg">
-            </div>
+      <!-- 轮播图片 -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../image/banner_02_1080p.jpg">
         </div>
+        <div class="carousel-item">
+          <img src="../image/banner_01_1080p.jpg">
+        </div>
+        <div class="carousel-item">
+          <img src="../image/banner_03_1080p.jpg">
+        </div>
+      </div>
 
-        <!-- 左右切换按钮 -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
+      <!-- 左右切换按钮 -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  <!-- </section> -->
+
+
+  <main>
+    <div class="wordTitle"> 
+      服务范围
+    </div>
+    <!-- 服务范围 -->
+    <!-- <div class="title title1">
+      <hr>
+      <text> 服务范围</text>
+      <hr>
+    </div> -->
+    <div class="sectionImg">
+      <div class="imgOne">
+        <div class="imgInfo"><img src="../image/section_01_1080p.jpg" alt=""></div>
+        <p>拯救地球</p>
+      </div>
+      <div class="imgOne">
+        <div class="imgInfo"><img src="../image/section_02_1080p.jpg" alt=""></div>
+        <p>英雄合照</p>
+      </div>
+      <div class="imgOne">
+        <div class="imgInfo"><img src="../image/section_03_1080p.jpg" alt=""></div>
+        <p>寻找原石</p>
+      </div>
+      <div class="imgOne">
+        <div class="imgInfo"><img src="../image/section_04_1080p.jpg" alt=""></div>
+        <p>宇宙旅行</p>
+      </div>
     </div>
 
+    <!-- 团队介绍 -->
+    <div class="wordTitle"> 
+      团队介绍
+    </div>
+    <div class="introduce">
+      <div class="intro_text">
+        <h3>汪逵周克希莫夫</h3>
+        快银的贳胞胎姊姊《（比快银早出生30秒，此蒍漫击原作设定)，原始般定是前磁王的女兒，
+        铜钱人的情始，和美国漾晨也有一段地下情，於2014年底的漫击速载中修改设定，
+        线红女巫跟快银是终桠造化(High Evolutionary〉基因霣骏産生的基因改造人，蚯非燮棰人，并且有一位之前未曾登塌的斐胞胎姊妹Luminous.
+      </div>
+      <div><img src="../image/article_1_1080p.jpg" alt="" width="300px"></div>
+    </div>
+    <hr>
+    <div class="introduce">
+      <div><img src="../image/article_2_1080p.jpg" alt="" width="300px"></div>
+      <div class="intro_text2">
+        <h3>汪逵周克希莫夫</h3>
+        快银的贳胞胎姊姊《（比快银早出生30秒，此蒍漫击原作设定)，原始般定是前磁王的女兒，
+        铜钱人的情始，和美国漾晨也有一段地下情，於2014年底的漫击速载中修改设定，
+        线红女巫跟快银是终桠造化(High Evolutionary〉基因霣骏産生的基因改造人，蚯非燮棰人，并且有一位之前未曾登塌的斐胞胎姊妹Luminous.
+      </div>
+    </div>
+    <hr>
+    <div class="introduce">
+      <div class="intro_text">
+        <h3>汪逵周克希莫夫</h3>
+        快银的贳胞胎姊姊《（比快银早出生30秒，此蒍漫击原作设定)，原始般定是前磁王的女兒，
+        铜钱人的情始，和美国漾晨也有一段地下情，於2014年底的漫击速载中修改设定，
+        线红女巫跟快银是终桠造化(High Evolutionary〉基因霣骏産生的基因改造人，蚯非燮棰人，并且有一位之前未曾登塌的斐胞胎姊妹Luminous.
+      </div>
+      <div><img src="../image/article_3_1080p.jpg" alt="" width="300px"></div>
+    </div>
+    <hr>
+    <div class="introduce">
+      <div><img src="../image/article_4_1080p.jpg" alt="" width="300px"></div>
+      <div class="intro_text2">
+        <h3>汪逵周克希莫夫</h3>
+        快银的贳胞胎姊姊《（比快银早出生30秒，此蒍漫击原作设定)，原始般定是前磁王的女兒，
+        铜钱人的情始，和美国漾晨也有一段地下情，於2014年底的漫击速载中修改设定，
+        线红女巫跟快银是终桠造化(High Evolutionary〉基因霣骏産生的基因改造人，蚯非燮棰人，并且有一位之前未曾登塌的斐胞胎姊妹Luminous.
+      </div>
+    </div>
 
-    <main>
-        <!-- 服务范围 -->
-        <div class="title title1">
-            <hr>
-            <text> 服务范围</text>
-            <hr>
-        </div>
-        <div class="sectionImg">
-            <div class="imgOne">
-                <div class="imgInfo"><img src="../image/section_01_1080p.jpg" alt=""></div>
-                <p>拯救地球</p>
-            </div>
-            <div class="imgOne">
-                <div class="imgInfo"><img src="../image/section_02_1080p.jpg" alt=""></div>
-                <p>英雄合照</p>
-            </div>
-            <div class="imgOne">
-                <div class="imgInfo"><img src="../image/section_03_1080p.jpg" alt=""></div>
-                <p>寻找原石</p>
-            </div>
-            <div class="imgOne">
-                <div class="imgInfo"><img src="../image/section_04_1080p.jpg" alt=""></div>
-                <p>宇宙旅行</p>
-            </div>
-        </div>
+    <!-- 新闻介绍 -->
+    <div class="wordTitle"> 
+      新闻介绍
+    </div>
+    <div class="intro_news">
+      <div class="newsOne">
+        <img src="../image/banner_01_1080p.jpg" alt="" width="240">
+        <p>针对变异霉株，采用多条技术路线，中国第二代新冠疫苗呼之欲出</p>
+      </div>
+      <div class="newsOne">
+        <img src="../image/banner_01_1080p.jpg" alt="" width="240">
+        <p>针对变异霉株，采用多条技术路线，中国第二代新冠疫苗呼之欲出</p>
+      </div>
+      <div class="newsOne">
+        <img src="../image/banner_01_1080p.jpg" alt="" width="240">
+        <p>针对变异霉株，采用多条技术路线，中国第二代新冠疫苗呼之欲出</p>
+      </div>
+      <div class="newsOne">
+        <img src="../image/banner_01_1080p.jpg" alt="" width="240">
+        <p>针对变异霉株，采用多条技术路线，中国第二代新冠疫苗呼之欲出</p>
+      </div>
+    </div>
+  </main>
 
-        <!-- 团队介绍 -->
-        <div class="title">
-            <hr>
-            <text> 团队介绍</text>
-            <hr>
-        </div>
-        <div class="introduce">
-            <div class="intro_text">
-                <h3>汪逵周克希莫夫</h3>
-                快银的贳胞胎姊姊《（比快银早出生30秒，此蒍漫击原作设定)，原始般定是前磁王的女兒，
-                铜钱人的情始，和美国漾晨也有一段地下情，於2014年底的漫击速载中修改设定，
-                线红女巫跟快银是终桠造化(High Evolutionary〉基因霣骏産生的基因改造人，蚯非燮棰人，并且有一位之前未曾登塌的斐胞胎姊妹Luminous.
-            </div>
-            <div><img src="../image/article_1_1080p.jpg" alt="" width="300px"></div>
-        </div>
-        <hr>
-        <div class="introduce">
-            <div><img src="../image/article_2_1080p.jpg" alt="" width="300px"></div>
-            <div class="intro_text2">
-                <h3>汪逵周克希莫夫</h3>
-                快银的贳胞胎姊姊《（比快银早出生30秒，此蒍漫击原作设定)，原始般定是前磁王的女兒，
-                铜钱人的情始，和美国漾晨也有一段地下情，於2014年底的漫击速载中修改设定，
-                线红女巫跟快银是终桠造化(High Evolutionary〉基因霣骏産生的基因改造人，蚯非燮棰人，并且有一位之前未曾登塌的斐胞胎姊妹Luminous.
-            </div>
-        </div>
-        <hr>
-        <div class="introduce">
-            <div class="intro_text">
-                <h3>汪逵周克希莫夫</h3>
-                快银的贳胞胎姊姊《（比快银早出生30秒，此蒍漫击原作设定)，原始般定是前磁王的女兒，
-                铜钱人的情始，和美国漾晨也有一段地下情，於2014年底的漫击速载中修改设定，
-                线红女巫跟快银是终桠造化(High Evolutionary〉基因霣骏産生的基因改造人，蚯非燮棰人，并且有一位之前未曾登塌的斐胞胎姊妹Luminous.
-            </div>
-            <div><img src="../image/article_3_1080p.jpg" alt="" width="300px"></div>
-        </div>
-        <hr>
-        <div class="introduce">
-            <div><img src="../image/article_4_1080p.jpg" alt="" width="300px"></div>
-            <div class="intro_text2">
-                <h3>汪逵周克希莫夫</h3>
-                快银的贳胞胎姊姊《（比快银早出生30秒，此蒍漫击原作设定)，原始般定是前磁王的女兒，
-                铜钱人的情始，和美国漾晨也有一段地下情，於2014年底的漫击速载中修改设定，
-                线红女巫跟快银是终桠造化(High Evolutionary〉基因霣骏産生的基因改造人，蚯非燮棰人，并且有一位之前未曾登塌的斐胞胎姊妹Luminous.
-            </div>
-        </div>
-
-        <!-- 新闻介绍 -->
-        <div class="title">
-            <hr>
-            <span> 新闻介绍</span>
-            <hr>
-        </div>
-        <div class="intro_news">
-            <div class="newsOne">
-                <img src="../image/banner_01_1080p.jpg" alt="" width="240">
-                <p>针对变异霉株，采用多条技术路线，中国第二代新冠疫苗呼之欲出</p>
-            </div>
-            <div class="newsOne">
-                <img src="../image/banner_01_1080p.jpg" alt="" width="240">
-                <p>针对变异霉株，采用多条技术路线，中国第二代新冠疫苗呼之欲出</p>
-            </div>
-            <div class="newsOne">
-                <img src="../image/banner_01_1080p.jpg" alt="" width="240">
-                <p>针对变异霉株，采用多条技术路线，中国第二代新冠疫苗呼之欲出</p>
-            </div>
-            <div class="newsOne">
-                <img src="../image/banner_01_1080p.jpg" alt="" width="240">
-                <p>针对变异霉株，采用多条技术路线，中国第二代新冠疫苗呼之欲出</p>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div>
-            <i class="fa fa-map-marker" aria-hidden="true"></i> 福州市仓山区 &nbsp;&nbsp;
-            <i class="fa fa-envelope-o" aria-hidden="true"></i> Robin@hotmail.com &nbsp;&nbsp;
-            <i class="fa fa-phone" aria-hidden="true"></i> 000-000-000
-        </div>
-        <div class="info">
-            <img src="../image/qr_code.jpg" alt="">
-            &nbsp;
-            <span>&copy;2021 Company, Inc</span>
-        </div>
-    </footer>
+  <footer>
+    <div>
+      <i class="fa fa-map-marker" aria-hidden="true"></i> 福州市仓山区 &nbsp;&nbsp;
+      <i class="fa fa-envelope-o" aria-hidden="true"></i> Robin@hotmail.com &nbsp;&nbsp;
+      <i class="fa fa-phone" aria-hidden="true"></i> 000-000-000
+    </div>
+    <div class="info">
+      <img src="../image/qr_code.jpg" alt="">
+      &nbsp;
+      <span>&copy;2021 Company, Inc</span>
+    </div>
+  </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script>
 
 
-        $('header ul li').click(function () {
-            $('header ul li').each(function () {
-                $(this).removeAttr('class', 'activeLi');
-            })
-            $(this).attr('class', 'activeLi');
-        })
-    </script>
+    $('header ul li').click(function () {
+      $('header ul li').each(function () {
+        $(this).removeAttr('class', 'activeLi');
+      })
+      $(this).attr('class', 'activeLi');
+    })
+  </script>
 </body>
 
 </html>
