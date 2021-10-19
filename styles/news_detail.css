@@ -52,7 +52,7 @@ main{
     padding: 10px 0;
     box-sizing: border-box;
     padding-left: 20px;
-    font-size: 20px;
+    font-size: 18px;
 }
 .title span{
     color: red;
@@ -117,7 +117,27 @@ main{
         text-align: center;
         padding: 0
     }
+    .title{
+      width: 100%;
+      background-color: #212529;
+      color: white;
+      line-height: 25px;
+      padding: 10px 0;
+      box-sizing: border-box;
+      padding-left: 20px;
+      font-size: 16px;
+  }
     #infos img{
         width: 100%;
     }
+    .title span{
+      line-height: 30px;
+      color: red;
+      font-size: 30px;
+      width: 20px;
+      height: 30px;
+      margin-top: 5px;
+      float: left;
+      font-weight: bolder;
+  }
 }
